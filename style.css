@@ -13,3 +13,6 @@ body{
     div{
         text-align: center;
     }
+    .bt{
+        border-radius: 70px;
+    }

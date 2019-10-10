@@ -6,9 +6,10 @@ function gerarInicial(){
             obj.setAttribute('id','idImg')
             obj.style.height = '200px'
             obj.style.borderRadius = '5%'
+            console.log('Nada')
             aqui.appendChild(obj)
         }
-        
+        y = 0
         x = 0
         var pag = [] 
         pag[0] = "0.gif"
@@ -25,22 +26,30 @@ function gerarInicial(){
             obj.setAttribute(`src`,`${pag[x]}`)
             obj.setAttribute('id','idImg')
             obj.style.height = '200px'
+            console.log(`Página: ${pag[x]}.`)
             aqui.appendChild(obj)
             delet()
         }
+
         function avancar(){
-            exibirImg()
-            x++
+        
+            x = x + 1
             if (x>=8){
                 x = 0
             }
-        }
-        function voltar(){
-            if (x<=-1){
-                x = 2
+            if(y == 0){
+                y += 1 
+                x = 0;
             }
             exibirImg()
-            x--  
+
+        }
+        function voltar(){
+            if (x<=0){
+                x = 7
+            }
+            x = x - 1
+            exibirImg()
         }
         function delet(){
             var node = document.getElementById("idImg")
