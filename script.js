@@ -55,7 +55,7 @@ function gerarInicial(){
             var node = document.getElementById("idImg")
             if (node.parentNode) {
             node.parentNode.removeChild(node)
-            }else{console.log("Nada aqui!")}
+            }else{console.log("aqui!")}
         }
 //--------------------------------------------------------------------
 var corpo = document.querySelector("p#bt")
