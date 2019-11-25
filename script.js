@@ -55,5 +55,11 @@ function gerarInicial(){
             var node = document.getElementById("idImg")
             if (node.parentNode) {
             node.parentNode.removeChild(node)
-            }else{console.log("Não havia nada aqui!")}
+            }else{console.log("Nada aqui!")}
         }
+//--------------------------------------------------------------------
+var corpo = document.querySelector("p#bt")
+var bt = document.createElement("input")
+bt.setAttributes('type','button')
+bt.setAttributes('value','Mudar')
+corpo.appendChild(bt)
